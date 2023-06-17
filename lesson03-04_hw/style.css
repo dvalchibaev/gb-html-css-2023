@@ -1,3 +1,13 @@
 a {
     text-decoration: none;
 }
+
+menu_link {
+    color: cornflowerblue;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+p {
+    color: green;
+}
