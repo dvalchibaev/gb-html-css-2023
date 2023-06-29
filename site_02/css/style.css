@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+}
+
+body {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 14px;
+    background-color: #FFF;
+}
+
+.top {
+
+}
+
+.header {
+    margin-top: 40px;
+    color: #000;
+}
+
+.bar {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 500px;
+    justify-content: start;
+    align-items: center;
+}
+
+.bar__logo {
+    display: grid;
+    grid-template-columns: 35px 14px auto auto;
+    gap: 0;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo__pic {
+    grid-column: 1;
+}
+
+.logo__grow {
+    grid-column: 3;
+    color: #000;
+    font-size: 24px;
+}
+
+.logo__be{
+    grid-column: 4;
+    color: #F25822;
+    font-size: 24px;
+}
+
+.bar__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 11px 0px;
+    width: 533px;
+}
+
+.menu__current {
+    color: #F25822;
+}
+
+.menu__link {
+    color: #000;
+}
+
+.menu__link:hover {
+    color: #AAA;
+}
+
+.menu__link:active {
+    color: #F25822;
+}
+
+.top__content {
+    margin-top: 84px;
+    margin-bottom: 162px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.top__content__info {
+    width: 522px;
+}
+
+.info__title {
+    padding-left: 2px;
+    margin: 0;
+    color: #000;
+    font-size: 60px;
+}
+
+.info__text {
+    padding-top: 17px;
+    padding-left: 2px;
+    color: #888;
+    font-size: 20px;
+}
+
+.top__buttons {
+    margin-top: 37px;
+    display: flex;
+    flex-direction: row;
+    gap: 72px;
+    font-size: 15px;
+}
+
+.button {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #AAA;
+}
+
+.button:active {
+    color: #F25822;
+}
+
+.button__start {
+    color: #FFF;
+    border-radius: 50px;
+    background: #F25822;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+}
+
+.button__start:active {
+    background: #AAA;
+    color: #FFF;
+}
+
+.content__pic {
+    height: 374px;
+    margin: 0;
+    padding: 0;
+}
+
+.top__brand {
+    margin-left: -30px;
+    padding: 97px 0 96px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 48px
+}
