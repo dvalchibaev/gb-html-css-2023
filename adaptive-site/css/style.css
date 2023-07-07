@@ -4,7 +4,11 @@
 }
 
 body {
+    font-family: 'Lato', sans-serif;
+}
 
+a {
+    text-decoration: none;
 }
 
 .center {
@@ -36,6 +40,23 @@ body {
 
 .menu__buttons {
     margin-right: 10px;
+    width: 160px;
+    display: grid;
+    grid-template-columns: 32px 25px 29px 42px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__button1 {
+    grid-column: 1;
+}
+
+.menu__button2 {
+    grid-column: 3;
+}
+
+.menu__button3 {
+    grid-column: 5;
 }
 
 .brand {
@@ -59,15 +80,15 @@ body {
 .brand__name {
     width: 337px;
     color: #222;
-    font-size: 27px;
+    font-size: 29px;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
 }
 
 .brand__h2 {
-    font-size: 48px;
+    font-size: 44px;
 }
 
 .brand__fassion {
@@ -96,7 +117,7 @@ body {
     gap: 30px;
     color: #FFF;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
@@ -110,42 +131,29 @@ body {
     background-color: rgba(33, 22, 22, 0.70);
 }
 
-.offers__block1 {
+.offers__block {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.offers__block1 {
     background-image: url("../img/offers01.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.offers__block2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
+.offers__block2 { 
     background-image: url("../img/offers02.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-
 }
 
-.offers__block3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
+.offers__block3 {  
     background-image: url("../img/offers03.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.offers__block4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+.offers__block4 {  
     grid-column: 1 / span 3;
     background-image: url("../img/offers04.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .offers__bold {
@@ -161,11 +169,20 @@ body {
 .products__h2 {
     text-align: center;
     margin-bottom: 6px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .products__p {
     text-align: center;
     margin-bottom: 48px;
+    color: #9F9F9F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .products__container {
@@ -204,7 +221,6 @@ body {
 
 .product__p {
     color: #5D5D5D;
-    font-family: Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -222,6 +238,7 @@ body {
 
 .buttoon__block {
     margin-top: 48px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,4 +252,74 @@ body {
     align-items: center;
     color: #F16D7F;
     outline: 1px solid #F16D7F;
+}
+
+.products__button:hover{
+    background-color: #F16D7F;
+    color: #FFF;
+}
+
+@media screen and (max-width: 1024px) {
+    .center {
+        padding: 0 16px;
+        width: 100vw;
+    }
+
+    .menu {
+        padding: 0 16px;
+    }
+
+    .brand {
+        height: fit-content;
+        gap: 39px;
+        align-items: center;
+    }
+
+    .brand__block {
+        margin: 0;
+        display: grid;
+        align-items: start;
+    }
+
+    .brand__image {
+        height: 50vh;
+        width: 50vw;
+        background-position: top;    
+    }
+
+    .offers {
+        padding-top: 65px;
+        padding-bottom: 110px;
+    }
+
+    .offers__container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: calc((13/54) * 100vw) calc((116/735) * 100vw);
+        gap: 20px;
+    }
+
+    .offers__block {
+        width: 100%;
+        height: 100%;
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products__container {
+        align-self: center;
+        display: grid;
+        grid-template-columns: repeat(2, 360px);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+        background-color: #FFF;
+    }
+
+    .buttoon__block {
+        margin-top: 32px;
+        margin-bottom: 70px;
+    }
 }
