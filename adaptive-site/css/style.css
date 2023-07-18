@@ -11,6 +11,14 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style-type: none;
+   }
+   ul {
+    margin-left: 0;
+    padding-left: 0;
+   }
+
 .center {
     padding: 0 calc(50vw - 570px);
 }
@@ -21,6 +29,7 @@ a {
     min-height: 75px;
     display: grid;
     align-items: center;
+    position: relative;
 }
 
 .menu {
@@ -57,6 +66,47 @@ a {
 
 .menu__button3 {
     grid-column: 5;
+}
+
+.navigation__block {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    display: flex;
+    padding: 32px;
+    width: 232px;
+    height: fit-content;
+    background: #FFF;
+    box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.menu__button1:active .navigation__block {
+    visibility: visible;
+}
+
+.menu__navigation {
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.main__navigation {
+    color: #F16D7F;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.sub__navigation {
+    padding: 12px 11px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px
+}
+
+.sub__navigation li {
+    color: #6F6E6E;
 }
 
 .brand {
@@ -240,10 +290,11 @@ a {
 }
 
 .cart__block{
-    display: none;
+    visibility: hidden;
 }
 
 .products__block:hover .cart__block{
+    visibility: visible;
     display: flex;
     height: 100%;
     justify-content: center;
